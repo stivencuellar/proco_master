@@ -1,5 +1,7 @@
 package co.com.proco.jpa.entities;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,11 +21,20 @@ public class Proyectos {
 	@Column(name="titulo")
 	private String titulo;
 	
+	@Column(name="nivelMadurez")
+	private String nivelMadurez;
+	
 	@Column(name="imagen")
 	private String imagen;
 	
 	@Column(name="descripcion")
 	private String descripcion;
+	
+	@Column(name="modificadoPor")
+	private String modificadoPor;
+	
+	@Column(name="fechaModificacion")
+	private Date fechaModificacion;
 
 	public int getId() {
 		return id;
@@ -41,6 +52,22 @@ public class Proyectos {
 		this.titulo = titulo;
 	}
 
+	public String getNivelMadurez() {
+		return nivelMadurez;
+	}
+
+	public void setNivelMadurez(String nivelMadurez) {
+		this.nivelMadurez = nivelMadurez;
+	}
+
+	public String getModificadoPor() {
+		return modificadoPor;
+	}
+
+	public void setModificadoPor(String modificadoPor) {
+		this.modificadoPor = modificadoPor;
+	}
+
 	public String getImagen() {
 		return imagen;
 	}
@@ -55,5 +82,13 @@ public class Proyectos {
 
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
+	}
+	
+	public Date getFechaModificacion() {
+		return fechaModificacion;
+	}
+
+	public void setFechaModificacion(Date fechaModificacion) {
+		this.fechaModificacion = fechaModificacion;
 	}
 }

@@ -62,7 +62,7 @@
 						data-toggle="dropdown">Ajustes<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="enConstruccion.jsp">Mi Perfil</a></li>
-							<li><a href="enConstruccion.jsp">Proyectos</a></li>
+							<li><a href="Proyectos">Proyectos</a></li>
 							<li><a href="Configuracion">Configuración</a></li>
 						</ul></li>
 				</ul>

@@ -10,6 +10,20 @@
      <class>co.com.proco.jpa.entities.Actividades</class>
      <class>co.com.proco.jpa.entities.TbConfiguracion</class>
      <class>co.com.proco.jpa.entities.TbAreaConocimiento</class>
+     <class>co.com.proco.jpa.entities.Proyectos</class>
+     <class>co.com.proco.jpa.entities.Conocimiento</class>
+     <class>co.com.proco.jpa.entities.Evidencia</class>
+     <class>co.com.proco.jpa.entities.Funcionalidad</class>
+     <class>co.com.proco.jpa.entities.Individuo</class>
+     <class>co.com.proco.jpa.entities.InformacionAcademica</class>
+     <class>co.com.proco.jpa.entities.Objetivo</class>
+     <class>co.com.proco.jpa.entities.Perfil</class>
+     <class>co.com.proco.jpa.entities.Permiso</class>
+     <class>co.com.proco.jpa.entities.Postulante</class>
+     <class>co.com.proco.jpa.entities.Requerimiento</class>
+     <class>co.com.proco.jpa.entities.Tarea</class>
+     <class>co.com.proco.jpa.entities.Versionamiento</class>
+     <class>co.com.proco.jpa.entities.Vinculo</class>
    </persistence-unit>
  
 </persistence>

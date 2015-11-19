@@ -21,7 +21,10 @@
 <!-- Custom CSS -->
 <link href="resources/css/3-col-portfolio.css" rel="stylesheet">
 
+	<script src="resources/js/jquery.js"></script>
 
+	<!-- Bootstrap Core JavaScript -->
+	<script src="resources/js/bootstrap.min.js"></script>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -71,14 +74,14 @@
 	<form class="form-horizontal" action="nuevaAreaConocimiento.jsp">
 		<fieldset>
 			<!-- Form Name -->
-			<legend>Areas de Conocimiento</legend>
+			<legend>Proyectos</legend>
 
 			<!-- Button -->
 			<div class="container">
 
 
 				<div align="left" class="col-md-1">
-					<button id="btnNuevaAreaConocimiento" name="btnNuevaAreaConocimiento" class="btn btn-warning" type="submit">+</button>
+					<button id="btnNuevoProyecto" name="btnNuevoProyecto" class="btn btn-warning" type="submit">+</button>
 				</div>
 			</div>
 
@@ -91,30 +94,32 @@
 						<thead>
 							<tr>
 								<th>#</th>
-								<th>Nombre</th>
+								<th>Titulo</th>
 								<th>Descripcion</th>
+								<th>Nivel de Madurez</th>
 								<th>Modificado Por</th>
-								<th>Fecha ModificaciÃ³n</th>
+								<th>Fecha Modificación</th>
 								<th></th>
 								<th></th>
 							</tr>
 						</thead>
 						<tbody>
-						<c:forEach items="${areaConocimientoObj}" var="AreaConocimientoDTO">
+						<c:forEach items="${proyectosobj}" var="ProyectosDTO">
 								<tr>
 									<td>1</td>
-									<td><c:out value="${ AreaConocimientoDTO.nombreAreaConocimiento}"/></td>
-									<td><c:out value="${ AreaConocimientoDTO.descAreaConocimiento}"/></td>
-									<td><c:out value="${ AreaConocimientoDTO.modificadoPor}"/></td>
-									<td><c:out value="${ AreaConocimientoDTO.fechaModificacion}"/></td>
+									<td><c:out value="${ ProyectosDTO.titulo}"/></td>
+									<td><c:out value="${ ProyectosDTO.descripcion}"/></td>
+									<td><c:out value="${ ProyectosDTO.nivelMadurez}"/></td>
+									<td><c:out value="${ ProyectosDTO.modificadoPor}"/></td>
+									<td><c:out value="${ ProyectosDTO.fechaModificacion}"/></td>
 									<td align="center" width="15px">
-										<button id="btnEditarAreaConocimiento"
-											name="btnEditarAreaConocimiento" class="btn btn-link"
+										<button id="btnEditarProyecto"
+											name="btnEditarProyecto" class="btn btn-link"
 											type="submit">editar</button>
 									</td>
 									<td align="center" width="15px">
-										<button id="btnEliminarAreaConocimiento"
-											name="btnEliminarAreaConocimiento" class="btn btn-link"
+										<button id="btnEliminarProyecto"
+											name="btnEliminarProyecto" class="btn btn-link"
 											type="submit">eliminar</button>
 									</td>
 								</tr>
