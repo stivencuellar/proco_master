@@ -1,6 +1,7 @@
 package co.com.proco.model;
 
 import java.io.Serializable;
+import java.sql.Date;
 
 public class ActividadesDTO implements Serializable {
 	
@@ -15,6 +16,10 @@ public class ActividadesDTO implements Serializable {
 	private Integer requeridos;
 	
 	private Integer recompenza;
+
+	private String modificadoPor;
+
+	private Date fechaModificacion;
 
 	public String getImagen() {
 		return imagen;
@@ -56,12 +61,35 @@ public class ActividadesDTO implements Serializable {
 		this.recompenza = recompenza;
 	}
 	
+	public String getModificadoPor() {
+		return modificadoPor;
+	}
+
+	public void setModificadoPor(String modificadoPor) {
+		this.modificadoPor = modificadoPor;
+	}
+
+	public Date getFechaModificacion() {
+		return fechaModificacion;
+	}
+
+	public void setFechaModificacion(Date fechaModificacion) {
+		this.fechaModificacion = fechaModificacion;
+	}
+
 	public ActividadesDTO (String titulo, String imagen, String descripcion){
 		this.titulo = titulo;
 		this.imagen = imagen;
 		this.descripcion = descripcion;
 		//this.recompenza = recompenza;
 		//this.requeridos = requeridos;
+	}
+	
+	public ActividadesDTO (String titulo, String descripcion, String modificadoPor, Date fechaModificacion){
+		this.titulo = titulo;
+		this.descripcion = descripcion;
+		this.modificadoPor = modificadoPor;
+		this.fechaModificacion = fechaModificacion;
 	}
 	
 	public ActividadesDTO(){

@@ -6,6 +6,10 @@ import java.util.List;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+
 import co.com.proco.dao.SesionDAO;
 import co.com.proco.model.SesionDTO;
 import co.com.proco.services.ProcoFacade;
@@ -60,4 +64,29 @@ public class SesionServicesImplLocal implements SesionServicesInterface {
 //		}
 //		return sesionList;
 //	}
+	
+	private static void getMethod() {
+	    try {
+	      // Construye el cliente web
+	      Client client = Client.create();
+	      WebResource webResource = client.resource("http://localhost:8080/mvc_ws/rest/json/hobbies/sesion");
+	      
+	      // Envia la peticion al WS y obtiene la respuesta
+	      ClientResponse response = webResource.accept("application/json").get(ClientResponse.class);
+	      if (response.getStatus() != 200) {
+	        throw new RuntimeException("Failed : HTTP error code : " + response.getStatus());
+	      }
+
+	      // Se procesa la respuesta
+	      String output = response.getEntity(String.class);
+	      System.out.println("Output from Server .... \n");
+	      System.out.println(output);
+	    } catch (Exception e) {
+	      e.printStackTrace();
+	    }
+	  }
+	
+	
+	
+	
 }

@@ -79,11 +79,60 @@
 				<label class="col-md-4 control-label" for="btnNuevoIndividuo"></label>
 				<div class="col-md-4">
 					<button id="btnNuevoIndividuo"
-						name="btnNuevoIndividuo" class="btn btn-warning" type="submit" >+</button>
+						name="btnNuevoIndividuo" class="btn btn-warning" type="submit" >Agregar Individuo</button>
 				</div>
 			</div>
 
 		</fieldset>
+		
+		<div class="container">
+			<div class="row">
+				<div class="table-responsive">
+					<table class="table table-condensed table-hover">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Primer Nombre</th>
+								<th>Segundo Nombre</th>
+								<th>Primer Apellido</th>
+								<th>Segundo Apellido</th>
+								<th>Numero de Documento</th>
+								<th>Email</th>
+								<th></th>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+						<c:forEach items="${individuosobj}" var="IndividuosDTO">
+								<tr>
+									<td>1</td>
+									<td name="prueba"><c:out value="${ IndividuosDTO.primerNombre}"/></td>
+									<td><c:out value="${ IndividuosDTO.segundoNombre}"/></td>
+									<td><c:out value="${ IndividuosDTO.primerApellido}"/></td>
+									<td><c:out value="${ IndividuosDTO.segundoApellido}"/></td>
+									<td><c:out value="${ IndividuosDTO.numeroDocumento}"/></td>
+									<td><c:out value="${ IndividuosDTO.email}"/></td>
+									<td align="center" width="15px">
+										<button id="btnEditarAreaConocimiento" name="btnEditarAreaConocimiento" class="btn btn-link" type="submit">ver</button>
+									</td>
+									<td align="center" width="15px">
+										<button id="btnEditarAreaConocimiento" name="btnEditarAreaConocimiento" class="btn btn-link" type="submit">editar</button>
+									</td>
+									<td align="center" width="15px">
+										<button id="btnEliminarAreaConocimiento"
+											name="btnEliminarAreaConocimiento" class="btn btn-link"
+											type="submit">eliminar</button>
+									</td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+		</div>
+		
 	</form>
 
 

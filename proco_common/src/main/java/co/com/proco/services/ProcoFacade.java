@@ -4,13 +4,16 @@ import java.util.List;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import co.com.proco.dao.ActividadesDAO;
 import co.com.proco.dao.AreasConocimientoDAO;
 import co.com.proco.dao.ConfiguracionDAO;
+import co.com.proco.dao.IndividuoDAO;
 import co.com.proco.dao.MisCosasDAO;
 import co.com.proco.dao.SesionDAO;
 import co.com.proco.model.ActividadesDTO;
 import co.com.proco.model.AreaConocimientoDTO;
 import co.com.proco.model.ConfiguracionDTO;
+import co.com.proco.model.IndividuoDTO;
 import co.com.proco.model.ProyectosDTO;
 import co.com.proco.model.SesionDTO;
 
@@ -49,4 +52,16 @@ public List<ProyectosDTO> getFirstProyectosDTOFromIndex() {
 	    MisCosasDAO misCosasDAO = context.getBean(MisCosasDAO.class);
 	    return misCosasDAO.getProyectosDTOList();
 	  }
+
+public List<ActividadesDTO> getFirstActividadesDTO() {
+    ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("Spring-Datasource-JPA.xml");
+    ActividadesDAO actividadesDAO = context.getBean(ActividadesDAO.class);
+    return actividadesDAO.getActividadesList();
+  }
+
+public List<IndividuoDTO> getFirstIndividuoDTO() {
+    ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("Spring-Datasource-JPA.xml");
+    IndividuoDAO individuoDAO = context.getBean(IndividuoDAO.class);
+    return individuoDAO.getIndividuoList();
+  }
 }

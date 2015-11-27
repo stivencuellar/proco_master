@@ -1,8 +1,12 @@
 package co.com.proco.model;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class IndividuoDTO {
+public class IndividuoDTO implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+
 	private String primerNombre;
 	
 	private String segundoNombre;
@@ -162,6 +166,18 @@ public class IndividuoDTO {
 		this.modificadoPor = modificadoPor;
 		this.fechaModificacion = fechaModificacion;
 	}
-	
-	
+
+	public IndividuoDTO(String primerNombre, String segundoNombre, String primerApellido, String segundoApellido,
+			String numeroDocumento, String email) {
+		this.primerNombre = primerNombre;
+		this.segundoNombre = segundoNombre;
+		this.primerApellido = primerApellido;
+		this.segundoApellido = segundoApellido;
+		this.numeroDocumento = numeroDocumento;
+		this.email = email;
+	}
+
+	public IndividuoDTO() {
+		super();
+	}
 }
