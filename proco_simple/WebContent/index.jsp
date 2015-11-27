@@ -2,12 +2,13 @@
     pageEncoding="ISO-8859-1"%>    
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
-    
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
     
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,6 +41,7 @@
 <body> 
 
 <!-- Navigation -->
+
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">Inicia Sesión<i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
@@ -51,18 +53,19 @@
                 <p class="txtLogin">Usuario</p>
             </li>
             <li>
-            	<input class="textBox" type="text" name="us">
+            	<input class="textBox" type="text" name="us" >
+            	
             </li>
             <li>
                 <p class="txtLogin">Contraseña</p>
             </li>
             <li>
             	<input class="textBox" type="password" name="pw">
+				
             </li>
             <li>
-            	<a href="MisCosas" class="btn btn-dark btn-lg">Ingresar</a>
+            	<a href="MisCosas" class="btn btn-dark btn-lg" >Ingresar</a>
             </li>
-            
         </ul>
     </nav>
 

@@ -1,5 +1,7 @@
 package co.com.proco.jpa.entities;
 
+import java.sql.Date;
+
 import javax.persistence.*;
 
 @Entity
@@ -24,6 +26,13 @@ public class Actividades {
 	
 	@Column(name="recompenza")
 	private String recompenza;
+	
+	@Column(name="modificadoPor")
+	private String modificadoPor;
+	
+	@Column(name="fechaModificacion")
+	private Date fechaModificacion;
+
 
 	public int getId() {
 		return id;
@@ -71,5 +80,21 @@ public class Actividades {
 
 	public void setRecompenza(String recompenza) {
 		this.recompenza = recompenza;
+	}
+	
+	public String getModificadoPor() {
+		return modificadoPor;
+	}
+
+	public void setModificadoPor(String modificadoPor) {
+		this.modificadoPor = modificadoPor;
+	}
+
+	public Date getFechaModificacion() {
+		return fechaModificacion;
+	}
+
+	public void setFechaModificacion(Date fechaModificacion) {
+		this.fechaModificacion = fechaModificacion;
 	}
 }
