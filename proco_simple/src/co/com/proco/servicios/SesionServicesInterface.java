@@ -13,4 +13,6 @@ import co.com.proco.model.SesionDTO;
 public interface SesionServicesInterface {
 
 	public List<SesionDTO> getSesiones();
+	
+	public List<SesionDTO> ObtenerSesion();
 }

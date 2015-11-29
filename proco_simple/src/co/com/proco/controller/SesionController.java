@@ -17,7 +17,7 @@ public class SesionController {
 		/* Invocar el servicio. **/
 		SesionServicesInterface rSesion = new SesionServicesImplLocal();
 		
-		ModelAndView modelAndView = new ModelAndView("index", "sesionobj", rSesion.getSesiones());
+		ModelAndView modelAndView = new ModelAndView("index", "sesionobj", rSesion.ObtenerSesion());
 		return modelAndView;
 	}
 }
