@@ -40,7 +40,7 @@ public class ProcoWSTest {
 		
 		try {
 			Client client = Client.create();
-			WebResource webResource = client.resource("http://localhost:8181/WebService/rest/json/servicios/sesion");
+			WebResource webResource = client.resource("http://localhost:8080/WebService/rest/json/servicios/sesion");
 			ClientResponse response = webResource.accept("application/json").get(ClientResponse.class);
 			
 			if (response.getStatus() != 200){

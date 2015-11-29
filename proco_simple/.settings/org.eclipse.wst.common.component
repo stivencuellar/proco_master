@@ -10,6 +10,6 @@
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/proco_simple/build/classes"/>
-        <property name="context-root" value="proco_simple"/>
+        <property name="context-root" value="proco"/>
     </wb-module>
 </project-modules>
