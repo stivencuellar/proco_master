@@ -6,6 +6,8 @@ import co.com.proco.model.AreaConocimientoDTO;
 
 public interface AreasConocimientoInterface {
 	
-	List<AreaConocimientoDTO> recuperarAreasConocimientoBD();	
+	public List<AreaConocimientoDTO> recuperarAreasConocimientoBD();	
+	
+	public List<AreaConocimientoDTO> recuperarAreasConocimientoWS();
 	
 }

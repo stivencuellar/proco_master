@@ -12,8 +12,11 @@ import javax.ws.rs.core.Response;
 
 import com.google.gson.Gson;
 
+import co.com.proco.model.ActividadesDTO;
 import co.com.proco.model.AreaConocimientoDTO;
 import co.com.proco.model.ConfiguracionDTO;
+import co.com.proco.model.IndividuoDTO;
+import co.com.proco.model.ProyectosDTO;
 import co.com.proco.model.SesionDTO;
 
 @Path("json/servicios")
@@ -35,7 +38,7 @@ public class ProcoWS {
 	@GET
 	@Path("/sesion")
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<SesionDTO> primerMetodo (){
+	public List<SesionDTO> obtenerSesiones (){
 		ProcoFacade facade = new ProcoFacade();
 		List<SesionDTO> sesionList = facade.obtenerSesiones();
 		return  sesionList; 
@@ -54,24 +57,58 @@ public class ProcoWS {
 	@GET
 	@Path("/configuracion")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response segundoMetodo (){
+	public Response obtenerConfiguracion (){
 		ProcoFacade facade = new ProcoFacade();
-		List<ConfiguracionDTO> sesionList = facade.obtenerConfiguracion();
-		
+		List<ConfiguracionDTO> configuracionList = facade.obtenerConfiguracion();		
 		Gson gson = new Gson();
-		String json = gson.toJson(sesionList);		
+		String json = gson.toJson(configuracionList);		
 		return Response.status(201).entity(json).build();
 	}
 	
 	@GET
 	@Path("/areasConocimiento")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response tercerMetodo (){
+	public Response obtenerAreasConocimiento (){
 		ProcoFacade facade = new ProcoFacade();
-		List<AreaConocimientoDTO> sesionList = facade.obtenerAreasConocimiento();
-		
+		List<AreaConocimientoDTO> areaConocimientoList = facade.obtenerAreasConocimiento();		
 		Gson gson = new Gson();
-		String json = gson.toJson(sesionList);		
+		String json = gson.toJson(areaConocimientoList);		
 		return Response.status(201).entity(json).build();
 	}
+	
+	
+	@GET
+	@Path("/misCosasProyectos")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response obtenerMisCosasActividades(){
+		ProcoFacade facade = new ProcoFacade();
+		List<ActividadesDTO> actividadesList = facade.getFirstActividadesDTOFromIndex();		
+		Gson gson = new Gson();
+		String json = gson.toJson(actividadesList);		
+		return Response.status(201).entity(json).build();
+	}
+	
+	@GET
+	@Path("/misCosasProyectos")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response obtenerMisCosasProyectos(){
+		ProcoFacade facade = new ProcoFacade();
+		List<ProyectosDTO> proyectosList = facade.getFirstProyectosDTOFromIndex();		
+		Gson gson = new Gson();
+		String json = gson.toJson(proyectosList);		
+		return Response.status(201).entity(json).build();
+	}
+	
+	@GET
+	@Path("/individuos")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response obtenerIndividuos(){
+		ProcoFacade facade = new ProcoFacade();
+		List<IndividuoDTO> individuosList = facade.getFirstIndividuoDTO();		
+		Gson gson = new Gson();
+		String json = gson.toJson(individuosList);		
+		return Response.status(201).entity(json).build();
+	}
+	
+	
 }

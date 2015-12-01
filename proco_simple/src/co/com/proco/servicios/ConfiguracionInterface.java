@@ -9,5 +9,7 @@ public interface ConfiguracionInterface {
 	public List<ConfiguracionDTO> recuperarConfiguracion();
 	
 	public List<ConfiguracionDTO> recuperarConfiguracionBD();
+	
+	public List<ConfiguracionDTO> obtenerConfiguracionWS();
 
 }

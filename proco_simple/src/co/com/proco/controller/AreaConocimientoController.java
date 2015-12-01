@@ -27,7 +27,7 @@ public class AreaConocimientoController {
 	@RequestMapping(value = "/areasConocimientoRender", method = RequestMethod.GET)
 	public ModelAndView flujoAreaConocimiento(){
 		AreasConocimientoInterface recuperarAreaConocimiento = new AreasConocimientoImplLocal();
-		ModelAndView modelAndView =  new ModelAndView("areasConocimientoRender", "areaConocimientoObj", recuperarAreaConocimiento.recuperarAreasConocimientoBD());
+		ModelAndView modelAndView =  new ModelAndView("areasConocimientoRender", "areaConocimientoObj", recuperarAreaConocimiento.recuperarAreasConocimientoWS());
 		return modelAndView;
 	}	
 }

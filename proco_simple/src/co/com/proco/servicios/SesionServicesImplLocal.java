@@ -48,28 +48,6 @@ public class SesionServicesImplLocal implements SesionServicesInterface {
     return sesionList;
   }
 	
-//	public List<SesionDTO> getSesiones() {
-//
-//		context = new ClassPathXmlApplicationContext("Spring-Module.xml");
-//
-//		// Se obtiene el servicio que implementa los servicios de la base de
-//		// datos
-//		SesionDAO sesionDAO = (SesionDAO) context.getBean("sesionDAO");
-//
-//		// Crear la lista con los DTO
-//		List<SesionDTO> sesionList = new ArrayList<SesionDTO>();
-//		List<Sesion> sesions = sesionDAO.getSesionList();
-//		for (Sesion sesion : sesions) {
-//			// Creando un objeto de la lista de tipo sesionDTO
-//			SesionDTO sesionDTO = new SesionDTO();
-//			sesionDTO.setTitulo(sesion.getTitulo());
-//			sesionDTO.setImagen(sesion.getImagen());
-//			// Adicionando el objeto a la lista
-//			sesionList.add(sesionDTO);
-//		}
-//		return sesionList;
-//	}
-	
 	public  List<SesionDTO> ObtenerSesion() {
 
 		List<SesionDTO> listaSesion = new ArrayList<SesionDTO>();
