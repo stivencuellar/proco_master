@@ -1,4 +1,4 @@
-<%@page contentType="text/html; charset=ISO-8859-1"  %>
+<%@page contentType="text/html; charset=ISO-8859-1"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -13,15 +13,13 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>PROCO</title>
+<title>PROCO - Informacion Academica</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom CSS -->
 <link href="resources/css/3-col-portfolio.css" rel="stylesheet">
-
-
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,37 +49,58 @@
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="enConstruccion.jsp">Actividades</a></li>
+					<li><a href="Actividades">Actividades</a></li>
+					<li><a href="Proyectos">Proyectos</a></li>
 					<li><a href="MisCosas">Mis Cosas</a></li>
 				</ul>
 				<ul class="nav navbar-nav ajuste">
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown">Ajustes<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="enConstruccion.jsp">Mi Perfil</a></li>
-							<li><a href="Proyectos">Proyectos</a></li>
-							<li><a href="Configuracion">Configuración</a></li>
+							<li><a href="areasConocimientoRender">AreaConocimiento</a></li>
+							<li><a href="Configuracion">Configuracion</a></li>
+							<li><a href="Conocimiento">Conocimiento</a></li>
+							<li><a href="Evidencia">Evidencia</a></li>
+							<li><a href="Funcionalidad">Funcionalidad</a></li>
+							<li><a href="Individuos">Individuo</a></li>
+							<li><a href="InformacionAcademica">InformacionAcademica</a></li>
+							<li><a href="Objetivo">Objetivo</a></li>
+							<li><a href="Perfil">Perfil</a></li>
+							<li><a href="Permiso">Permiso</a></li>
+							<li><a href="Postulante">Postulante</a></li>
+							<li><a href="Requerimiento">Requerimiento</a></li>
+							<li><a href="Tarea">Tarea</a></li>
+							<li><a href="Versionamiento">Versionamiento</a></li>
+							<li><a href="Vinculo">Vinculo</a></li>
 						</ul></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-<!-- Navigation -->
+	<!-- Navigation -->
 
-	<form class="form-horizontal" action="nuevaAreaConocimiento.jsp">
+	<form class="form-horizontal" action="enConstruccion.jsp">
 		<fieldset>
-			<!-- Form Name -->
-			<legend>Informacion Academica</legend>
-
-			<!-- Button -->
 			<div class="container">
 
+				<!-- Titulo Actividades -->
+				<div class="row">
 
-				<div align="left" class="col-md-1">
-					<button id="btnNuevaAreaConocimiento" name="btnNuevaAreaConocimiento" class="btn btn-warning" type="submit">+</button>
+					<div class="col-lg-12">
+						<h1 class="page-header">
+							<small>Informacion Academica</small>
+						</h1>
+					</div>
+				</div>
+
+				<!-- Button -->
+				<div class="container">
+					<div align="left" class="col-md-1">
+						<button id="btnNuevaActividad" name="btnNuevaActividad"
+							class="btn btn-warning" type="submit">Agregar Informacion Academica</button>
+					</div>
 				</div>
 			</div>
-
 		</fieldset>
 
 		<div class="container">
@@ -90,36 +109,31 @@
 					<table class="table table-condensed table-hover">
 						<thead>
 							<tr>
-								<th>#</th>
 								<th>Institucion</th>
 								<th>Programa</th>
 								<th>Tipo</th>
 								<th>Semestre</th>
 								<th>Modificado Por</th>
-								<th>Fecha ModificaciÃ³n</th>
+								<th>Fecha Modificacion</th>
 								<th></th>
 								<th></th>
 							</tr>
 						</thead>
 						<tbody>
-						<c:forEach items="${infoobj}" var="InformacionAcademicaDTO">
+							<c:forEach items="${infoActividadesobj}" var="InformacionAcademicaDTO">
 								<tr>
-									<td>1</td>
-									<td><c:out value="${ InformacionAcademicaDTO.institucion}"/></td>
-									<td><c:out value="${ InformacionAcademicaDTO.programa}"/></td>
-									<td><c:out value="${ InformacionAcademicaDTO.tipo}"/></td>
-									<td><c:out value="${ InformacionAcademicaDTO.semestre}"/></td>
-									<td><c:out value="${ InformacionAcademicaDTO.modificadoPor}"/></td>
-									<td><c:out value="${ InformacionAcademicaDTO.fechaModificacion}"/></td>
+									<td><c:out value="${ InformacionAcademicaDTO.institucion}" /></td>
+									<td><c:out value="${ InformacionAcademicaDTO.programa}" /></td>
+									<td><c:out value="${ InformacionAcademicaDTO.tipo}" /></td>
+									<td><c:out value="${ InformacionAcademicaDTO.semestre}" /></td>
+									<td><c:out value="${ InformacionAcademicaDTO.modificadoPor}" /></td>
+									<td><c:out value="${ InformacionAcademicaDTO.fechaModificacion}" /></td>
+									<td align="center" width="15px"><a
+										href="enConstruccion.jsp"> <img class="iconRender" src="resources/img/Edita.png" />
+									</a></td>
 									<td align="center" width="15px">
-										<button id="btnEditarAreaConocimiento"
-											name="btnEditarAreaConocimiento" class="btn btn-link"
-											type="submit">editar</button>
-									</td>
-									<td align="center" width="15px">
-										<button id="btnEliminarAreaConocimiento"
-											name="btnEliminarAreaConocimiento" class="btn btn-link"
-											type="submit">eliminar</button>
+										<a href="enConstruccion.jsp"> <img class="iconRender" src="resources/img/Eliminar.png" />
+									</a>
 									</td>
 								</tr>
 							</c:forEach>
@@ -132,6 +146,11 @@
 
 	</form>
 
+	<!-- jQuery -->
+	<script src="resources/js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="resources/js/bootstrap.min.js"></script>
 </body>
 
 </html>

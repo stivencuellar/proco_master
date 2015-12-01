@@ -13,7 +13,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>PROCO</title>
+<title>PROCO - Proyectos</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
@@ -54,16 +54,29 @@
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="enConstruccion.jsp">Actividades</a></li>
+					<li><a href="Actividades">Actividades</a></li>
+					<li><a href="Proyectos">Proyectos</a></li>
 					<li><a href="MisCosas">Mis Cosas</a></li>
 				</ul>
 				<ul class="nav navbar-nav ajuste">
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown">Ajustes<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="enConstruccion.jsp">Mi Perfil</a></li>
-							<li><a href="Proyectos">Proyectos</a></li>
-							<li><a href="Configuracion">Configuración</a></li>
+							<li><a href="areasConocimientoRender">AreaConocimiento</a></li>
+							<li><a href="Configuracion">Configuracion</a></li>
+							<li><a href="Conocimiento">Conocimiento</a></li>
+							<li><a href="Evidencia">Evidencia</a></li>
+							<li><a href="Funcionalidad">Funcionalidad</a></li>
+							<li><a href="Individuos">Individuo</a></li>
+							<li><a href="InformacionAcademica">InformacionAcademica</a></li>
+							<li><a href="Objetivo">Objetivo</a></li>
+							<li><a href="Perfil">Perfil</a></li>
+							<li><a href="Permiso">Permiso</a></li>
+							<li><a href="Postulante">Postulante</a></li>
+							<li><a href="Requerimiento">Requerimiento</a></li>
+							<li><a href="Tarea">Tarea</a></li>
+							<li><a href="Versionamiento">Versionamiento</a></li>
+							<li><a href="Vinculo">Vinculo</a></li>
 						</ul></li>
 				</ul>
 			</div>

@@ -15,7 +15,7 @@ public class InformacionAcademicaController {
 	public ModelAndView inicioInformacionAcademica() {
 		
 		ModelAndView model = new ModelAndView();
-		model.addObject("infoobj",new InformacionAcademicaImplLocal().getInformacionAcademica());
+		model.addObject("infoActividadesobj",new InformacionAcademicaImplLocal().getInformacionAcademica());
 		model.setViewName("infoAcademicaRender");
 		return model;
 	}

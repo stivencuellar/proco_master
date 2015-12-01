@@ -57,22 +57,21 @@
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown">Ajustes<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="areasConocimientoRender">Area Conocimiento</a></li>
-							<li><a href="configuracion">Configuracion</a></li>
-							<li><a href="conocimientoRender">Conocimiento</a></li>
-							<li><a href="evidenciaRender">Evidencia</a></li>
-							<li><a href="funcionalidadRender">Funcionalidad</a></li>
-							<li><a href="individuoRender">Individuo</a></li>
-							<li><a href="informacion academicaRender">Informacion Academica</a></li>
-							<li><a href="objetivo Render">Objetivo </a></li>
-							<li><a href="perfilRender">Perfil</a></li>
-							<li><a href="permisoRender">Permiso</a></li>
-							<li><a href="postulanteRender">Postulante</a></li>
-							<li><a href="requerimientoRender">Requerimiento</a></li>
-							<li><a href="sesionRender">Sesion</a></li>
-							<li><a href="tareaRender">Tarea</a></li>
-							<li><a href="versionamientoRender">Versionamiento</a></li>
-							<li><a href="vinculoRender">Vinculo</a></li>
+							<li><a href="areasConocimientoRender">AreaConocimiento</a></li>
+							<li><a href="Configuracion">Configuracion</a></li>
+							<li><a href="Conocimiento">Conocimiento</a></li>
+							<li><a href="Evidencia">Evidencia</a></li>
+							<li><a href="Funcionalidad">Funcionalidad</a></li>
+							<li><a href="Individuos">Individuo</a></li>
+							<li><a href="InformacionAcademica">InformacionAcademica</a></li>
+							<li><a href="Objetivo">Objetivo </a></li>
+							<li><a href="Perfil">Perfil</a></li>
+							<li><a href="Permiso">Permiso</a></li>
+							<li><a href="Postulante">Postulante</a></li>
+							<li><a href="Requerimiento">Requerimiento</a></li>
+							<li><a href="Tarea">Tarea</a></li>
+							<li><a href="Versionamiento">Versionamiento</a></li>
+							<li><a href="Vinculo">Vinculo</a></li>
 						</ul></li>
 				</ul>
 			</div>

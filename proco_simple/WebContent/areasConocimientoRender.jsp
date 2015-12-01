@@ -1,4 +1,4 @@
-<%@page contentType="text/html; charset=ISO-8859-1"  %>
+<%@page contentType="text/html; charset=ISO-8859-1"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -55,30 +55,31 @@
 					<li><a href="Proyectos">Proyectos</a></li>
 					<li><a href="MisCosas">Mis Cosas</a></li>
 				</ul>
-				<ul class="dropdown-menu">
-							<li><a href="enConstruccion.jsp">Mi Perfil</a></li>
-							<li><a href="Area Conocimiento">Area Conocimiento</a></li>
+				<ul class="nav navbar-nav ajuste">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">Ajustes<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="areasConocimientoRender">AreaConocimiento</a></li>
 							<li><a href="Configuracion">Configuracion</a></li>
 							<li><a href="Conocimiento">Conocimiento</a></li>
 							<li><a href="Evidencia">Evidencia</a></li>
 							<li><a href="Funcionalidad">Funcionalidad</a></li>
-							<li><a href="Individuo">Individuo</a></li>
-							<li><a href="Informacion Academica">Informacion	Academica</a></li>
+							<li><a href="Individuos">Individuo</a></li>
+							<li><a href="InformacionAcademica">InformacionAcademica</a></li>
 							<li><a href="Objetivo ">Objetivo </a></li>
 							<li><a href="Perfil">Perfil</a></li>
 							<li><a href="Permiso">Permiso</a></li>
 							<li><a href="Postulante">Postulante</a></li>
 							<li><a href="Requerimiento">Requerimiento</a></li>
-							<li><a href="Sesion">Sesion</a></li>
 							<li><a href="Tarea">Tarea</a></li>
 							<li><a href="Versionamiento">Versionamiento</a></li>
 							<li><a href="Vinculo">Vinculo</a></li>
-							<li><a href="Configuracion">Configuración</a></li>
-						</ul>
+						</ul></li>
+				</ul>
 			</div>
 		</div>
 	</nav>
-<!-- Navigation -->
+	<!-- Navigation -->
 
 	<form class="form-horizontal" action="nuevaAreaConocimiento.jsp">
 		<fieldset>
@@ -122,18 +123,24 @@
 							</tr>
 						</thead>
 						<tbody>
-						<c:forEach items="${areaConocimientoObj}" var="AreaConocimientoDTO">
+							<c:forEach items="${areaConocimientoObj}"
+								var="AreaConocimientoDTO">
 								<tr>
-									<td><c:out value="${ AreaConocimientoDTO.nombreAreaConocimiento}"/></td>
-									<td><c:out value="${ AreaConocimientoDTO.descAreaConocimiento}"/></td>
-									<td><c:out value="${ AreaConocimientoDTO.modificadoPor}"/></td>
-									<td><c:out value="${ AreaConocimientoDTO.fechaModificacion}"/></td>
-									<td align="center" width="15px">
-										<a href="enConstruccion.jsp"> <img class="iconRender" src="resources/img/Edita.png"/> </a>
-									</td>
-									<td align="center" width="15px">
-										<a href="enConstruccion.jsp"> <img class="iconRender" src="resources/img/Eliminar.png"/> </a>
-									</td>
+									<td><c:out
+											value="${ AreaConocimientoDTO.nombreAreaConocimiento}" /></td>
+									<td><c:out
+											value="${ AreaConocimientoDTO.descAreaConocimiento}" /></td>
+									<td><c:out value="${ AreaConocimientoDTO.modificadoPor}" /></td>
+									<td><c:out
+											value="${ AreaConocimientoDTO.fechaModificacion}" /></td>
+									<td align="center" width="15px"><a
+										href="enConstruccion.jsp"> <img class="iconRender"
+											src="resources/img/Edita.png" />
+									</a></td>
+									<td align="center" width="15px"><a
+										href="enConstruccion.jsp"> <img class="iconRender"
+											src="resources/img/Eliminar.png" />
+									</a></td>
 								</tr>
 							</c:forEach>
 						</tbody>
@@ -145,6 +152,12 @@
 
 	</form>
 
+	<!-- jQuery -->
+	<script src="resources/js/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="resources/js/bootstrap.min.js"></script>
+</body>
 </body>
 
 </html>

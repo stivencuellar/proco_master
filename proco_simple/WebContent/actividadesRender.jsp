@@ -62,9 +62,9 @@
 							<li><a href="Conocimiento">Conocimiento</a></li>
 							<li><a href="Evidencia">Evidencia</a></li>
 							<li><a href="Funcionalidad">Funcionalidad</a></li>
-							<li><a href="Individuo">Individuo</a></li>
+							<li><a href="Individuos">Individuo</a></li>
 							<li><a href="InformacionAcademica">InformacionAcademica</a></li>
-							<li><a href="Objetivo ">Objetivo </a></li>
+							<li><a href="Objetivo">Objetivo </a></li>
 							<li><a href="Perfil">Perfil</a></li>
 							<li><a href="Permiso">Permiso</a></li>
 							<li><a href="Postulante">Postulante</a></li>
