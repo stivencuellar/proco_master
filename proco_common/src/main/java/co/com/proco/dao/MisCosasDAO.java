@@ -9,4 +9,4 @@ public interface MisCosasDAO {
 	public List<ActividadesDTO> getActividadesDTOList();
 
 	public List<ProyectosDTO> getProyectosDTOList();
-}
+} 

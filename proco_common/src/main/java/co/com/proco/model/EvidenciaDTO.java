@@ -39,4 +39,8 @@ public class EvidenciaDTO {
 		this.modificadoPor = modificadoPor;
 		this.fechaModificacion = fechaModificacion;
 	}
+	
+	public EvidenciaDTO(){
+		
+	}
 }

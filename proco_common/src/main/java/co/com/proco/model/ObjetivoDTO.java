@@ -51,5 +51,8 @@ public class ObjetivoDTO {
 		this.fechaModificacion = fechaModificacion;
 	}
 	
+	public ObjetivoDTO(){
+		
+	}
 	
 }

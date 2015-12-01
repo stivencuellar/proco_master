@@ -29,5 +29,7 @@ public class PermisoDTO {
 		this.fechaModificacion = fechaModificacion;
 	}
 	
-	
+	public PermisoDTO(){
+		
+	}
 }

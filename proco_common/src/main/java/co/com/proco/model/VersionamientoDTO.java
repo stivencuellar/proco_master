@@ -63,4 +63,8 @@ public class VersionamientoDTO {
 		this.fechaModificacion = fechaModificacion;
 	}
 
+	public VersionamientoDTO() {
+		super();
+	}
+
 }

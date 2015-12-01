@@ -29,5 +29,7 @@ public class RequerimientoDTO {
 		this.fechaModificacion = fechaModificacion;
 	}
 	
-	
+	public RequerimientoDTO(){
+		super();
+	}
 }

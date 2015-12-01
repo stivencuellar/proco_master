@@ -52,4 +52,7 @@ public class FuncionalidadDTO {
 		this.fechaModificacion = fechaModificacion;
 	}
 	
+	public FuncionalidadDTO(){
+		
+	}
 }

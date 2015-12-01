@@ -16,11 +16,15 @@ public class JPAIndividuoDAO implements IndividuoDAO{
 	@PersistenceContext
 	private EntityManager em = null;
 	
-	public List<IndividuoDTO> getIndividuoList() {
+	public List<IndividuoDTO> getIndividuosList() {
 		List<IndividuoDTO> individuoDTOList = null;
 		individuoDTOList = em.createQuery(queryBuilder("s.primerNombre", "s.segundoNombre", "s.primerApellido", "s.segundoApellido", "s.numeroDocumento","s.email")).getResultList();
 		return individuoDTOList;
 	}
+	
+//	List<DTO> DTOList = null;
+//	DTOList = em.createQuery(queryBuilder("")).getResultList();
+//	return DTOList;
 
 	private String queryBuilder(String... parametros){
 	    String query = "";
@@ -35,4 +39,5 @@ public class JPAIndividuoDAO implements IndividuoDAO{
 	    query = sb.toString();
 	    return query;
 	  }
+
 }

@@ -51,4 +51,8 @@ public class PerfilDTO {
 		this.modificadoPor = modificadoPor;
 		this.fechaModificacion = fechaModificacion;
 	}
+	
+	public PerfilDTO(){
+		
+	}
 }

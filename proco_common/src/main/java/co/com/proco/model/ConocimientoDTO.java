@@ -40,4 +40,7 @@ public class ConocimientoDTO {
 		this.fechaModificacion = fechaModificacion;
 	}
 	
+	public ConocimientoDTO(){
+		
+	}
 }

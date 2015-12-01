@@ -29,5 +29,7 @@ public class PostulanteDTO {
 		this.fechaPostulacion = fechaPostulacion;
 	}
 	
-	
+	public PostulanteDTO(){
+		
+	}
 }

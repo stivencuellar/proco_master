@@ -13,7 +13,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>PROCO</title>
+<title>PROCO - Areas de Conocimiento</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
@@ -51,18 +51,30 @@
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="enConstruccion.jsp">Actividades</a></li>
+					<li><a href="Actividades">Actividades</a></li>
+					<li><a href="Proyectos">Proyectos</a></li>
 					<li><a href="MisCosas">Mis Cosas</a></li>
 				</ul>
-				<ul class="nav navbar-nav ajuste">
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown">Ajustes<b class="caret"></b></a>
-						<ul class="dropdown-menu">
+				<ul class="dropdown-menu">
 							<li><a href="enConstruccion.jsp">Mi Perfil</a></li>
-							<li><a href="Proyectos">Proyectos</a></li>
+							<li><a href="Area Conocimiento">Area Conocimiento</a></li>
+							<li><a href="Configuracion">Configuracion</a></li>
+							<li><a href="Conocimiento">Conocimiento</a></li>
+							<li><a href="Evidencia">Evidencia</a></li>
+							<li><a href="Funcionalidad">Funcionalidad</a></li>
+							<li><a href="Individuo">Individuo</a></li>
+							<li><a href="Informacion Academica">Informacion	Academica</a></li>
+							<li><a href="Objetivo ">Objetivo </a></li>
+							<li><a href="Perfil">Perfil</a></li>
+							<li><a href="Permiso">Permiso</a></li>
+							<li><a href="Postulante">Postulante</a></li>
+							<li><a href="Requerimiento">Requerimiento</a></li>
+							<li><a href="Sesion">Sesion</a></li>
+							<li><a href="Tarea">Tarea</a></li>
+							<li><a href="Versionamiento">Versionamiento</a></li>
+							<li><a href="Vinculo">Vinculo</a></li>
 							<li><a href="Configuracion">Configuración</a></li>
-						</ul></li>
-				</ul>
+						</ul>
 			</div>
 		</div>
 	</nav>
@@ -70,15 +82,26 @@
 
 	<form class="form-horizontal" action="nuevaAreaConocimiento.jsp">
 		<fieldset>
-			<!-- Form Name -->
-			<legend>Areas de Conocimiento</legend>
+			<div class="container">
 
+				<!-- Titulo Actividades -->
+				<div class="row">
+
+					<div class="col-lg-12">
+						<h1 class="page-header">
+							<small>Areas Conocimiento</small>
+						</h1>
+					</div>
+				</div>
+			</div>
 			<!-- Button -->
 			<div class="container">
 
 
 				<div align="left" class="col-md-1">
-					<button id="btnNuevaAreaConocimiento" name="btnNuevaAreaConocimiento" class="btn btn-warning" type="submit">+</button>
+					<button id="btnNuevaAreaConocimiento"
+						name="btnNuevaAreaConocimiento" class="btn btn-warning"
+						type="submit">Agregar Area de Conocimiento</button>
 				</div>
 			</div>
 
@@ -90,11 +113,10 @@
 					<table class="table table-condensed table-hover">
 						<thead>
 							<tr>
-								<th>#</th>
 								<th>Nombre</th>
 								<th>Descripcion</th>
 								<th>Modificado Por</th>
-								<th>Fecha ModificaciÃ³n</th>
+								<th>Fecha Modificacion</th>
 								<th></th>
 								<th></th>
 							</tr>
@@ -102,20 +124,15 @@
 						<tbody>
 						<c:forEach items="${areaConocimientoObj}" var="AreaConocimientoDTO">
 								<tr>
-									<td>1</td>
 									<td><c:out value="${ AreaConocimientoDTO.nombreAreaConocimiento}"/></td>
 									<td><c:out value="${ AreaConocimientoDTO.descAreaConocimiento}"/></td>
 									<td><c:out value="${ AreaConocimientoDTO.modificadoPor}"/></td>
 									<td><c:out value="${ AreaConocimientoDTO.fechaModificacion}"/></td>
 									<td align="center" width="15px">
-										<button id="btnEditarAreaConocimiento"
-											name="btnEditarAreaConocimiento" class="btn btn-link"
-											type="submit">editar</button>
+										<a href="enConstruccion.jsp"> <img class="iconRender" src="resources/img/Edita.png"/> </a>
 									</td>
 									<td align="center" width="15px">
-										<button id="btnEliminarAreaConocimiento"
-											name="btnEliminarAreaConocimiento" class="btn btn-link"
-											type="submit">eliminar</button>
+										<a href="enConstruccion.jsp"> <img class="iconRender" src="resources/img/Eliminar.png"/> </a>
 									</td>
 								</tr>
 							</c:forEach>

@@ -15,7 +15,7 @@ public final class ActividadesController {
 		
 		ModelAndView model = new ModelAndView();
 		model.addObject("actividadesobj",new ActividadesImplLocal().getActividades());
-		model.setViewName("actividades");
+		model.setViewName("actividadesRender");
 		return model;
 	}
 }

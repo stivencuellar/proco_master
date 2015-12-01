@@ -89,5 +89,7 @@ public class AreaConocimientoDTO {
 		this.fechaModificacion = fechaModificacion;
 	}
 	
-	
+	public AreaConocimientoDTO(){
+		
+	}
 }

@@ -51,4 +51,7 @@ public class TareaDTO {
 		this.fechaModificacion = fechaModificacion;
 	}
 	
+	public TareaDTO(){
+		super();
+	}
 }

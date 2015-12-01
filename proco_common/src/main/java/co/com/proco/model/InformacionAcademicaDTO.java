@@ -86,4 +86,18 @@ public class InformacionAcademicaDTO {
 		this.fechaModificacion = fechaModificacion;
 	}
 	
+	public InformacionAcademicaDTO(String institucion, String programa, String tipo, String semestre,String modificadoPor, Date fechaModificacion) {
+		super();
+		this.institucion = institucion;
+		this.programa = programa;
+		this.tipo = tipo;
+		this.semestre = semestre;
+		this.modificadoPor = modificadoPor;
+		this.fechaModificacion = fechaModificacion;
+	}
+
+	public InformacionAcademicaDTO() {
+		super();
+	}
+	
 }

@@ -26,6 +26,20 @@ public class ActividadesImplLocal implements ActividadesInterface{
 			actividadesList.add(actividadDTOJPA);
 		}
 		return actividadesList;
+		
+//		ProcoFacade Facade = new ProcoFacade();
+//		List<DTO>  DTOList = actividadesFacade.getFirstActividadesDTOFromIndex();
+//		List<DTO>  List = new ArrayList<ActividadesDTO>();
+//		
+//		for (ActividadesDTO actividadDTO : actividadesDTOList) {
+//			ActividadesDTO actividadDTOJPA = new ActividadesDTO();
+//			actividadDTOJPA.setTitulo(actividadDTO.getTitulo());
+//			actividadDTOJPA.setDescripcion(actividadDTO.getDescripcion());
+//			actividadDTOJPA.setModificadoPor(actividadDTO.getModificadoPor());
+//			actividadDTOJPA.setFechaModificacion(actividadDTO.getFechaModificacion());
+//			actividadesList.add(actividadDTOJPA);
+//		}
+//		return actividadesList;
 	}
 
 }

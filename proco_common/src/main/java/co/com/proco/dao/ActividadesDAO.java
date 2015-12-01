@@ -7,3 +7,6 @@ import co.com.proco.model.ActividadesDTO;
 public interface ActividadesDAO {
 	public List<ActividadesDTO> getActividadesList();
 }
+
+
+//public List<> getComocimiento();

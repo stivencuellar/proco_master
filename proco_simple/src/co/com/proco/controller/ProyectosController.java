@@ -13,7 +13,7 @@ public class ProyectosController {
 	public ModelAndView inicioProyectos() {
 		ModelAndView model = new ModelAndView();
 		model.addObject("proyectosobj",new ProyectosImplLocal().getProyectos());
-		model.setViewName("proyectos");
+		model.setViewName("proyectosRender");
 		return model;
 	}
 }

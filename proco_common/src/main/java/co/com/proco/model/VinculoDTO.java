@@ -39,6 +39,10 @@ public class VinculoDTO {
 		this.modificadoPor = modificadoPor;
 		this.fechaModificacion = fechaModificacion;
 	}
+
+	public VinculoDTO() {
+		super();
+	}
 	
 	
 }
